@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply font-sans antialiased bg-sand-50 text-slate-800;
+    /* Clean, soft background that reduces eye strain */
+    background-color: #fbfaf7;
+  }
+}
+
+@layer components {
+  /* Elderly-friendly primary button: minimum 56px height, large text, gentle feedback */
+  .btn-primary {
+    @apply inline-flex min-h-[58px] items-center justify-center gap-2.5 rounded-2xl bg-sage-600 px-6 py-4 text-xl font-bold text-white transition-all hover:bg-sage-700 active:scale-[0.98] shadow-sm;
+  }
+  .btn-secondary {
+    @apply inline-flex min-h-[58px] items-center justify-center gap-2.5 rounded-2xl border-2 border-sage-200 bg-white px-6 py-4 text-xl font-bold text-sage-800 transition-all hover:border-sage-400 hover:bg-sage-50 active:scale-[0.98];
+  }
+  .card {
+    @apply rounded-3xl bg-white p-6 shadow-sm border border-sand-200;
+  }
+  .card-hover {
+    @apply rounded-3xl bg-white p-6 shadow-sm border border-sand-200 transition-all hover:border-sage-300 hover:shadow-md active:scale-[0.99];
+  }
+}
